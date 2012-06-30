@@ -19,7 +19,10 @@
 // by Bill Jacobs.
 //
 
+
+
 #import "QRCorrectionLevel.h"
+#import <UIKit/UIKit.h>
 
 @class QRMatrix;
 

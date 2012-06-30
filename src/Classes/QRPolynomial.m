@@ -46,7 +46,7 @@
 - (void)dealloc {
   free(_coeffs);
 
-  [super dealloc];
+  //[super dealloc];
 }
 
 
@@ -69,14 +69,14 @@
   }
   QRPolynomial *p2 = [[QRPolynomial alloc] initWithCoeffs:cs length:length2 shift:0];
   free(cs);
-  return [p2 autorelease];
+  return p2;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (QRPolynomial *)mod:(QRPolynomial *)p {
   if (_length < p->_length) {
-    return [[self retain] autorelease];
+    return self;
   }
   int ratio = [QRMath log:_coeffs[0]] - [QRMath log:p->_coeffs[0]];
   int *cs = (int *)malloc(_length * sizeof(int));
@@ -87,7 +87,7 @@
   QRPolynomial *p2 = [[QRPolynomial alloc] initWithCoeffs:cs length:_length shift:0];
   free(cs);
   QRPolynomial *p3 = [p2 mod:p];
-  [p2 release];
+  //[p2 release];
   return p3;
 }
 

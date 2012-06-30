@@ -48,7 +48,7 @@
   free(_bits);
   free(_set);
 
-  [super dealloc];
+  //[super dealloc];
 }
 
 

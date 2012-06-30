@@ -354,11 +354,7 @@ static int RS_BLOCK_TABLE[][7] = {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)dealloc {
-  [_str release];
-  [_matrix release];
-  [super dealloc];
-}
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -395,6 +391,7 @@ static int RS_BLOCK_TABLE[][7] = {
   CFRelease(c);
   UIImage *image2 = [UIImage imageWithCGImage:image];
   CFRelease(image);
+  free(bytes);
   return image2;
 }
 
@@ -432,9 +429,13 @@ static int RS_BLOCK_TABLE[][7] = {
     image = nil;
   }
 
-  for(int i = 0; i < 8; i++) {
-    [encoders[i] release];
-  }
+  //for(int i = 0; i < 8; i++) {
+    //[encoders[i] release];
+ // }
+    
+    ///for ( int i = 0; i < 8; i++ ) {
+        //encoder[i] = nil;
+    //}
 
   return image;
 }
@@ -625,9 +626,9 @@ static int RS_BLOCK_TABLE[][7] = {
     for(int j = 0; j < block[i]; j++) {
       [blocks addObject:block2];
     }
-    [block2 release];
+    //[block2 release];
   }
-  return [blocks autorelease];
+  return blocks;
 }
 
 
@@ -640,7 +641,7 @@ static int RS_BLOCK_TABLE[][7] = {
   for(int i = 0; i < [_str length]; i++) {
     unichar c = [_str characterAtIndex:i];
     if (c >= 256) {
-      [buffer release];
+      //[buffer release];
       return nil;
     }
     [buffer append:c length:8];
@@ -655,7 +656,7 @@ static int RS_BLOCK_TABLE[][7] = {
 
   if (buffer.numBits > totalDataCount * 8) {
     //Code overflow
-    [buffer release];
+    //[buffer release];
     return nil;
   }
 
@@ -685,14 +686,13 @@ static int RS_BLOCK_TABLE[][7] = {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (QRPolynomial *)errorCorrectPolynomial:(int)length {
   int cs[2] = {1, 0};
-
-  QRPolynomial *p = [[[QRPolynomial alloc] initWithCoeffs:cs length:1 shift:0] autorelease];
+    
+  QRPolynomial *p = [[QRPolynomial alloc] initWithCoeffs:cs length:1 shift:0];
 
   for(int i = 0; i < length; i++) {
     cs[1] = [QRMath exp:i];
     QRPolynomial *p2 = [[QRPolynomial alloc] initWithCoeffs:cs length:2 shift:0];
     p = [p multiply:p2];
-    [p2 release];
   }
 
   return p;
@@ -865,7 +865,7 @@ static int RS_BLOCK_TABLE[][7] = {
   QRBitBuffer *data = [self getData];
   if (data == nil) {
     // Code overflow
-    [_matrix release];
+    //[_matrix release];
     _matrix = nil;
 
   } else {

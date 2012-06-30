@@ -39,7 +39,7 @@
 - (void)dealloc {
   free(_buffer);
 
-  [super dealloc];
+  //[super dealloc];
 }
 
 
