@@ -14,20 +14,12 @@
 		A505CB14159F35E200220088 /* libQREncoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A505CAFF159F35E100220088 /* libQREncoder.a */; };
 		A505CB1A159F35E200220088 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A505CB18159F35E200220088 /* InfoPlist.strings */; };
 		A505CB1D159F35E200220088 /* QREncoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A505CB1C159F35E200220088 /* QREncoderTests.m */; };
-		A505CB24159F364A00220088 /* QRBitBuffer.h in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33110A4F1840071984A /* QRBitBuffer.h */; };
 		A505CB25159F364A00220088 /* QRBitBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33210A4F1840071984A /* QRBitBuffer.m */; };
-		A505CB26159F364A00220088 /* QRMatrix.h in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33310A4F1840071984A /* QRMatrix.h */; };
 		A505CB27159F364A00220088 /* QRMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33410A4F1840071984A /* QRMatrix.m */; };
-		A505CB28159F364A00220088 /* QRMath.h in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33910A4F1840071984A /* QRMath.h */; };
 		A505CB29159F364A00220088 /* QRMath.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33A10A4F1840071984A /* QRMath.m */; };
-		A505CB2A159F364A00220088 /* QRPolynomial.h in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33B10A4F1840071984A /* QRPolynomial.h */; };
 		A505CB2B159F364A00220088 /* QRPolynomial.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33C10A4F1840071984A /* QRPolynomial.m */; };
-		A505CB2C159F364A00220088 /* QRRSBlock.h in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33D10A4F1840071984A /* QRRSBlock.h */; };
 		A505CB2D159F364A00220088 /* QRRSBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33E10A4F1840071984A /* QRRSBlock.m */; };
-		A505CB2E159F364A00220088 /* QRCorrectionLevel.h in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33610A4F1840071984A /* QRCorrectionLevel.h */; };
-		A505CB2F159F364A00220088 /* QREncoder.h in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33710A4F1840071984A /* QREncoder.h */; };
 		A505CB30159F364A00220088 /* QREncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33810A4F1840071984A /* QREncoder.m */; };
-		A505CB31159F364A00220088 /* QREncoder_Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA2E610A4ECE30071984A /* QREncoder_Prefix.pch */; };
 		EB7DA3DC10A4F67E0071984A /* QREncoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA3D610A4F6560071984A /* QREncoderTests.m */; };
 		EB7DA43710A4F9C50071984A /* QRBitBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33210A4F1840071984A /* QRBitBuffer.m */; };
 		EB7DA43810A4F9C60071984A /* QRMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA33410A4F1840071984A /* QRMatrix.m */; };
@@ -51,8 +43,6 @@
 /* Begin PBXFileReference section */
 		A505CAFF159F35E100220088 /* libQREncoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libQREncoder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A505CB03159F35E100220088 /* QREncoder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QREncoder-Prefix.pch"; sourceTree = "<group>"; };
-		A505CB04159F35E100220088 /* QREncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QREncoder.h; sourceTree = "<group>"; };
-		A505CB05159F35E100220088 /* QREncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QREncoder.m; sourceTree = "<group>"; };
 		A505CB0C159F35E200220088 /* QREncoderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QREncoderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A505CB0D159F35E200220088 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A505CB0F159F35E200220088 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -171,8 +161,6 @@
 		A505CB01159F35E100220088 /* QREncoder */ = {
 			isa = PBXGroup;
 			children = (
-				A505CB04159F35E100220088 /* QREncoder.h */,
-				A505CB05159F35E100220088 /* QREncoder.m */,
 				A505CB02159F35E100220088 /* Supporting Files */,
 			);
 			path = QREncoder;
@@ -377,20 +365,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A505CB24159F364A00220088 /* QRBitBuffer.h in Sources */,
 				A505CB25159F364A00220088 /* QRBitBuffer.m in Sources */,
-				A505CB26159F364A00220088 /* QRMatrix.h in Sources */,
 				A505CB27159F364A00220088 /* QRMatrix.m in Sources */,
-				A505CB28159F364A00220088 /* QRMath.h in Sources */,
 				A505CB29159F364A00220088 /* QRMath.m in Sources */,
-				A505CB2A159F364A00220088 /* QRPolynomial.h in Sources */,
 				A505CB2B159F364A00220088 /* QRPolynomial.m in Sources */,
-				A505CB2C159F364A00220088 /* QRRSBlock.h in Sources */,
 				A505CB2D159F364A00220088 /* QRRSBlock.m in Sources */,
-				A505CB2E159F364A00220088 /* QRCorrectionLevel.h in Sources */,
-				A505CB2F159F364A00220088 /* QREncoder.h in Sources */,
 				A505CB30159F364A00220088 /* QREncoder.m in Sources */,
-				A505CB31159F364A00220088 /* QREncoder_Prefix.pch in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +614,7 @@
 				A505CB20159F35E200220088 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A505CB21159F35E200220088 /* Build configuration list for PBXNativeTarget "QREncoderTests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +623,7 @@
 				A505CB23159F35E200220088 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB7DA3B210A4F5DA0071984A /* Build configuration list for PBXNativeTarget "QREncoderTest" */ = {
 			isa = XCConfigurationList;
