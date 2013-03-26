@@ -398,12 +398,20 @@ static int RS_BLOCK_TABLE[][7] = {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
++ (UIImage *)encode:(NSString *)str {
+    return [self encode:str scaleFactor:1];
+}
+
 + (UIImage *)encode:(NSString *)str scaleFactor:(int)scaleFactor {
 	return [QREncoder encode:str size:4 correctionLevel:QRCorrectionLevelHigh scaleFactor:scaleFactor];
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
++ (UIImage *)encode:(NSString *)str size:(int)size correctionLevel:(QRCorrectionLevel)level {
+    return [self encode:str size:size correctionLevel:level scaleFactor:1];
+}
+
 + (UIImage *)encode:(NSString *)str size:(int)size correctionLevel:(QRCorrectionLevel)level scaleFactor:(int)scaleFactor {
   QREncoder *encoders[8];
   for(int i = 0; i < 8; i++) {
